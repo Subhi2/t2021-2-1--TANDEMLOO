@@ -1,0 +1,38 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class prog4 
+{
+	public static void series(int a)
+	{
+		int input = a*2;
+		ArrayList<Integer> al = new ArrayList<>();
+		for(int i=0;i<input;i++)
+		{
+			if(i%2!=0)
+			{
+				al.add(i);
+			}
+		}
+		if(a%2==0)
+		{
+			al.remove(al.size()-1);
+			System.out.println("input a = "+a+", then output : "+al);
+		}
+		else
+		{
+			System.out.println("input a = "+a+", then output : "+al);
+		}
+	}
+
+	public static void main(String[] args) 
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter integer input");
+		int x = sc.nextInt();
+		series(x);
+		
+
+	}
+
+}
